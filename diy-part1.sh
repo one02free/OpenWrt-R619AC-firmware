@@ -14,11 +14,10 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
+sed -i '$a src-git nas https://github.com/linkease/nas-packages.git;master' feeds.conf.default
+
 
 # Add a feed source
 rm -rf package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git /package/lean/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
-#git clone https://github.com/one02free/luci-app-koolproxyR.git package/lean/luci-app-koolproxyR
 git clone https://github.com/project-lede/luci-app-godproxy.git package/lean/luci-app-godproxy
-git clone https://github.com/linkease/ddnsto-openwrt.git package/network/services/ddnsto-openwrt
